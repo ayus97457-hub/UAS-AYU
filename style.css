@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    background: #9370DB;
+    border-radius: 450px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+.todo-app {
+  height: 550px;        /* kunci tinggi */
+  display: flex;
+  flex-direction: column;
+}
+.container {
+    background-image: url("bg.jpg");
+    width: 450px;
+    height: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.1);
+    display: flex ;
+    flex: 1;
+    overflow-y: auto;
+    justify-content: center ;
+    align-items: center ;
+}
+.empty-image{
+    width: 200px;
+    height: 200px;
+    position: sticky;
+    left: 100px; 
+    border-radius: 15px;
+    margin: 0 auto;
+    display: block;
+}
+h1 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    position: sticky;
+    z-index: 10;
+    padding: 15px;
+    flex-shrink: 0;
+}
+p{
+    text-align: center;
+    color: #ebe9f1;
+    background: rgba(0, 0, 0, 0.3);
+     z-index: 10;
+    padding: 15px;
+}
+input#time-input {
+    padding: 8px;
+    width: 50px;
+    color: black;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+.input-group {
+    display: flex;
+}
+.input {
+    flex: 1;
+    padding: 8px;
+}
+button#add-btn {
+    padding: 10px 13px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 17px;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: white;
+    margin-bottom: 9px;
+    border-radius: 4px;
+}
+.completed {
+    text-decoration: line-through;
+    color: green;
+}
+.delete-btn {
+    color: white;
+    cursor: pointer;
+    background: red;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.counter {
+  justify-content: space-between;
+  padding: 5px;
+  color: white;
+}
+button#changeColorBtn {
+    background: #7B68EE;
+    color: white;
+}

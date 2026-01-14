@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To Do List App</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" href="style.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+   <div class="todo-app">
+    <div class="header">
+      <h1>To-Do List &#128205; <br> Your Schedule &#128221;</h1>
+      <p>"Kita tidak bisa mengubah masa lalu, 
+        tapi bisa merubah arah masa depan dengan memanfaatkan waktu 
+        sekarang."</p>
+    </div>
+        <!-- Tombol untuk mengubah warna berganti-ganti -->
+         <button id="changeColorBtn">Berganti warna disini</button>
+    <div class="counter">
+          <span>Total Tugas: <b id="totalTask">0</b></span> |
+          <span>Selesai: <b id="doneTask">0</b></span>
+       </div>
+    <form class="input-area">
+      <input type="time" id="time-input">
+      <input type="text" id="task-input" placeholder="Ada tugas apa hari ini?">
+      <button id="add-btn" type="button">Tambah</button>
+    </form>
+      <div class="todos-container">
+        <ul id="task-list"></ul>
+           <img class="empty-image" src="list.jpg" alt="empty">
+        </div>
+      </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script>
+        // Array siklus berganti-ganti warna
+        const colors = ['#8A2BE2', '#BA55D3', '#970DB', '#483D8B', '#9932CC']; // lightpink, lightsalmon, lightseagreen, lightskyblue, lightsteelblue
+        let currentIndex = 0; // Indeks awal siklus
+        
+        // Elemen tombol dan input
+        const changeColorBtn = document.getElementById('changeColorBtn');
+        const colorPicker = document.getElementById('colorPicker');
+        
+        // Fungsi untuk mengubah warna background secara berganti-ganti
+        changeColorBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length; // Siklus kembali ke awal
+        });
+        
+        // Fungsi untuk mengubah warna background berdasarkan pilihan input
+        colorPicker.addEventListener('input', (event) => {
+            document.body.style.backgroundColor = event.target.value;
+        });
+    </script>
+</html>
